@@ -50,7 +50,7 @@ func (a *OKWSAgent) Start(config *Config) error {
 		log.Fatalf("dial:%+v", err)
 		return err
 	} else {
-		if a.config.IsPrint {
+		if config.IsPrint {
 			log.Printf("Connected to %s", a.baseUrl)
 		}
 		a.conn = c
